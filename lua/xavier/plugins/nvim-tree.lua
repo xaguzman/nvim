@@ -8,7 +8,7 @@ if not config_status_ok then
   return
 end
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
+--local tree_cb = nvim_tree_config.nvim_tree_callback
 
 
 -- disable netrw at the very start of your init.lua (strongly advised)
@@ -21,7 +21,7 @@ require("nvim-tree").setup({
   update_focused_file = {
     enable = true,
     update_cwd = true,
-  },  
+  },
   renderer = {
     root_folder_modifier = ":t",
     icons = {
@@ -51,7 +51,7 @@ require("nvim-tree").setup({
     },
   },
   diagnostics = {
-    enable = true,
+    --enable = true,
     show_on_dirs = true,
     icons = {
       hint = "",

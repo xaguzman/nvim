@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+--local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -36,16 +36,16 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi<ESC>", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi<ESC>", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Show / hide nvim-tree
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode 
-keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
