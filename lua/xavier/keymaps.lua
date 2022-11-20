@@ -32,7 +32,7 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Clear last search highlight
-keymap("n", "<C-l>", ":noh<CR>", opts)
+keymap("n", "<leader><C-l>", ":noh<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)

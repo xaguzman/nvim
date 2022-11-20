@@ -39,46 +39,52 @@ packer.init({
 })
 
 return packer.startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+	-- Packer can manage itself
+	use("wbthomason/packer.nvim")
 
-  use "nvim-lua/plenary.nvim"     -- Useful lua functions used by lots of plugins
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 
-  use "windwp/nvim-autopairs"
+	use("windwp/nvim-autopairs")
 
-  use "onsails/lspkind-nvim"
+	use("onsails/lspkind-nvim")
 
-  use "folke/which-key.nvim"
+	use("folke/which-key.nvim")
 
-  use "RRethy/nvim-base16"
+	use("RRethy/nvim-base16")
 
-  use "nvim-tree/nvim-web-devicons"
-  use "nvim-tree/nvim-tree.lua"
-  use "nvim-lualine/lualine.nvim"
-  use "akinsho/bufferline.nvim"
+	use("nvim-tree/nvim-web-devicons")
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-lualine/lualine.nvim")
+	use("akinsho/bufferline.nvim")
 
-  -- cmp plugins
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
-  use "saadparwaiz1/cmp_luasnip"
-  use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"
+	-- cmp plugins
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lua")
+	use("saadparwaiz1/cmp_luasnip")
+	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
 
-  -- lsp plugins
-  use "williamboman/mason.nvim"
-  use "neovim/nvim-lspconfig"
-  use "williamboman/mason-lspconfig"
-  use "RRethy/vim-illuminate"
-  use "jose-elias-alvarez/null-ls.nvim"
+	-- lsp plugins
+	use("williamboman/mason.nvim")
+	use("neovim/nvim-lspconfig")
+	use("williamboman/mason-lspconfig")
+	use("RRethy/vim-illuminate")
+	use("jose-elias-alvarez/null-ls.nvim")
 
-  -- treesitter
-  use "nvim-treesitter/nvim-treesitter"
+	-- treesitter
+	use("nvim-treesitter/nvim-treesitter")
 
-  -- git
-  use "lewis6991/gitsigns.nvim"
+	-- git
+	use("lewis6991/gitsigns.nvim")
+
+	-- telescope
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
@@ -86,4 +92,3 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-
